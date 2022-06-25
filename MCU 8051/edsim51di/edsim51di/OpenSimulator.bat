@@ -1,0 +1,3 @@
+@echo off
+echo Opening the Edsim51 simulator....
+start java -jar edsim51di.jar
