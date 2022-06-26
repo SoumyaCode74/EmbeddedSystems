@@ -1,0 +1,66 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    06/27/2022  03:24:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\First1.obj, .\Objects\Toggle_LEDs.obj TO .\Objects\First1 PRINT (.\Listings\First1
+>> .m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\First1.obj (FIRST1)
+  .\Objects\Toggle_LEDs.obj (TOGGLE_LEDS)
+
+
+LINK MAP OF MODULE:  .\Objects\First1 (FIRST1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0005H     ABSOLUTE     
+* OVERLAP * CODE    0000H     000EH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\First1 (FIRST1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FIRST1
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0004H         LINE#         4
+  -------         ENDMOD        FIRST1
+
+  -------         MODULE        TOGGLE_LEDS
+  C:0002H         SYMBOL        CONT
+  D:0090H         SYMBOL        P1
+  C:0009H         SYMBOL        WAIT
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0004H         LINE#         4
+  C:0006H         LINE#         5
+  C:0008H         LINE#         6
+  C:0009H         LINE#         7
+  C:000AH         LINE#         8
+  C:000CH         LINE#         11
+  -------         ENDMOD        TOGGLE_LEDS
+
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0004H
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0013H BYTE ( 0%) *
+******************************************************************************
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/27/2022  03:24:13  PAGE 2
+
+
+Program Size: data=8.0 xdata=0 code=19
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

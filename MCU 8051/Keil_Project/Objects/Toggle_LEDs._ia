@@ -1,0 +1,1 @@
+"Toggle_LEDs.asm" SET (SMALL) DEBUG PRINT(.\Listings\Toggle_LEDs.lst) OBJECT(.\Objects\Toggle_LEDs.obj) EP

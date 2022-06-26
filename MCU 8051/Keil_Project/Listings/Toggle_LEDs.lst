@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  TOGGLE_LEDS                                                          06/27/2022 03:24:13 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Toggle_LEDs.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE Toggle_LEDs.asm SET(SMALL) DEBUG PRINT(.\Listings\Toggle_LEDs.lst) OBJE
+                      CT(.\Objects\Toggle_LEDs.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 74AA              2     MOV A, #0AAH
+0002 F590              3     CONT:MOV P1, A
+0004 79FF              4     MOV R1, #0FFH
+0006 7A0A              5     MOV R2, #0AH
+0008 23                6     RL A
+0009 00                7     WAIT:NOP
+000A D9FD              8     DJNZ R1, WAIT
+                       9     ;MOV R1, #0FFH
+                      10     ;DJNZ R2, WAIT
+000C 80F4             11     SJMP CONT
+                      12     END
+                                 
+A51 MACRO ASSEMBLER  TOGGLE_LEDS                                                          06/27/2022 03:24:13 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONT . . . . . . .  C ADDR   0002H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+WAIT . . . . . . .  C ADDR   0009H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
