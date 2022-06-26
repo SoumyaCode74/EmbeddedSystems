@@ -1,0 +1,11 @@
+;Program to clear internal RAM
+ORG 0000H
+CLR A
+MOV PSW, #00H
+MOV R0, #00H
+MOV R1, #7FH
+NEXT: MOV @R1, #00H
+	 DEC R1
+	 CJNE R1,#01H, NEXT
+	MOV R1, #00H
+	END

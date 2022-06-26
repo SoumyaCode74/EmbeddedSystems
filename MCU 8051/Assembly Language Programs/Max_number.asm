@@ -1,0 +1,20 @@
+ORG 0000H
+;Store 5 values at Reg bank 3
+MOV 10H, #43H
+MOV 11H, #65H
+MOV 12H, #23H
+MOV 13H, #0F3H
+MOV 14H, 10H
+;Program to find max value
+SETB PSW.3
+MOV DPTR, #2000H ;Here store max value
+MOV R0, #10H  ;ADDRESS PTR TO DATA
+MOV R1, #04H  ;HOW MANY TIMES TO LOOP?
+MOV A, @R0
+NEXT: INC R0
+SUBB A,@R0
+JNC DCR ;GOTO R1-- if A >= @R0
+MOV A, @R0	;IF CY=1, A < @R0
+DCR: DJNZ R1, NEXT
+MOV @DPTR, A ;Save the max value
+END

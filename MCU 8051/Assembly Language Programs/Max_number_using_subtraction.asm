@@ -1,0 +1,26 @@
+ORG 0000H
+;Store 5 values at Reg bank 3
+MOV 10H, #11H
+MOV 11H, #62H
+MOV 12H, #7FH
+MOV 13H, #44H
+MOV 14H, #55H
+;Program to find max value
+SETB PSW.3
+MOV R2, #20H ;Here store max value
+MOV R0, #10H  ;ADDRESS PTR TO DATA
+MOV R1, #04H  ;HOW MANY TIMES TO LOOP?
+MOV A, @R0
+MOV R3, A
+NEXT: INC R0
+SUBB A,@R0 ; A = A - @R0
+JNC L1
+JC L2
+L1: MOV A, R3
+DJNZ R1, NEXT
+SJMP SAVE
+L2: MOV A, @R0
+MOV R3, A
+DJNZ R1, NEXT
+SAVE: MOV 20H, A
+END

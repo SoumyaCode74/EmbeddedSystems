@@ -4,3 +4,4 @@ MOV R1, #08H ;Saving address of Bank 1
 			 ;R0 in R1
 MOV A, @R1   ;Moving value of
 			 ;address 08H to Acc
+MOV DPTR, #20H
