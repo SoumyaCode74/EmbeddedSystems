@@ -63,7 +63,7 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	uint16_t prev_state = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -96,12 +96,31 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		uint16_t read_state = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
-		if (read_state == 1)
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
-		else
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
-		
-		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
+		if ((prev_state == 0 && read_state == 1) || (prev_state == 1 && read_state == 0)){
+			if (prev_state == 1)
+				prev_state = 0;
+			for(int i = 1; i <= 1000; i++){
+											HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
+						}
+						for(int i = 1; i <= 1000; i++){
+								HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
+						}
+
+
+			}
+
+		if ((prev_state == 1 && read_state == 1) || (prev_state == 0 && read_state == 0)){
+			if (prev_state == 0)
+				prev_state = 1;
+			for(int i = 1;; i++){
+						HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
+						if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
+						{
+							break;
+						}
+			}
+		}
+		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
   }
   /* USER CODE END 3 */
 }
@@ -128,9 +147,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 16;
-  RCC_OscInitStruct.PLL.PLLN = 336;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 50;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -146,7 +165,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -171,8 +190,8 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : PC13 */
   GPIO_InitStruct.Pin = GPIO_PIN_13;
-  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PA5 */
@@ -180,6 +199,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
