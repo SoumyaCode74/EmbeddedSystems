@@ -1,0 +1,6 @@
+David says , " Programming is fun !" 
+**Conditions apply , "Offers valid until tomorrow"
+C:\My computer\My folder
+D:/My documents/My file
+\ \ \ \ Today is holiday \ \ \ \
+This is a triple quoted string """ This month has 30 days """
