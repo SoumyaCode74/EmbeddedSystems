@@ -1,1 +1,7 @@
-Info: Nothing to build for math
+18:51:13 **** Incremental Build of configuration Debug for project math ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o math.exe main.o math.o 
+
+18:51:13 Build Finished. 0 errors, 0 warnings. (took 260ms)
+

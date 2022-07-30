@@ -5,19 +5,19 @@
  *      Author: soumy
  */
 
-int math_add(int a, int b)
+int math_add(unsigned int a, unsigned int b)
 {
 	return a + b;
 }
-int math_sub(int a, int b)
+int math_sub(unsigned int a, unsigned int b)
 {
 	return a - b;
 }
-long long int math_mul(int a, int b)
+long long int math_mul(int a, unsigned int b)
 {
-	return a * b;
+	return (long long unsigned int )a * b;
 }
-int math_div(int a, int b)
+int math_div(unsigned int a, unsigned int b)
 {
 	return a / b;
 }

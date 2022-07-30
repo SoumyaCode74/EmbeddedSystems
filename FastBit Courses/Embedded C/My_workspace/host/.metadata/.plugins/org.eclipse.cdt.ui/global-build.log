@@ -1,5 +1,9 @@
-18:14:17 **** Incremental Build of configuration Debug for project math ****
+18:49:11 **** Incremental Build of configuration Debug for project math ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o math.o "..\\math.c" 
+gcc -o math.exe main.o math.o 
+Info: Nothing to build for math
+18:51:13 **** Incremental Build of configuration Debug for project math ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
 gcc -o math.exe main.o math.o 
-Info: Nothing to build for math
