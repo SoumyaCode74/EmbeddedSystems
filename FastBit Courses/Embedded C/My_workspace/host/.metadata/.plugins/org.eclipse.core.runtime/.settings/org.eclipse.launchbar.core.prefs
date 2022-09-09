@@ -5,4 +5,5 @@ configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:math,org.eclipse
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:math/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:math/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:math.exe/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:math.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

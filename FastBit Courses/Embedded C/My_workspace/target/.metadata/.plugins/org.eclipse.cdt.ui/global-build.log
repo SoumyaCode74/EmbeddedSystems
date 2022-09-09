@@ -1,0 +1,21 @@
+09:48:19 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+make -j8 all 
+arm-none-eabi-size   003AddTwoNumbers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+Finished building: default.size.stdout
+ 
+10:10:04 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+make -j8 all 
+arm-none-eabi-size   003AddTwoNumbers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+Finished building: default.size.stdout
+ 
+10:15:28 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+make -j8 all 
+arm-none-eabi-size   003AddTwoNumbers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+Finished building: default.size.stdout
+ 

@@ -26,6 +26,11 @@
 int main(void)
 {
     /* Loop forever */
-	printf("Hello World!\n");
+	printf("Hello Soumyadeep!\n");
+	printf("Size of Char data type: %d bytes\n",sizeof(char));
+	printf("Size of Short data type: %d bytes\n",sizeof(short));
+	printf("Size of Integer data type: %d bytes\n",sizeof(int));
+	printf("Size of Long data type: %d bytes\n",sizeof(long));
+	printf("Size of Long Long Integer data type: %d bytes\n",sizeof(long long));
 	for(;;);
 }

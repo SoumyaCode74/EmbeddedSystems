@@ -1,0 +1,10 @@
+00:07:56 **** Incremental Build of configuration Debug for project LED_Self_Bare ****
+make -j8 all 
+arm-none-eabi-size   LED_Self_Bare.elf 
+   text	   data	    bss	    dec	    hex	filename
+    696	      8	   1576	   2280	    8e8	LED_Self_Bare.elf
+Finished building: default.size.stdout
+ 
+
+00:07:56 Build Finished. 0 errors, 0 warnings. (took 171ms)
+
