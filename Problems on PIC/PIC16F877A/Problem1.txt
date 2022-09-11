@@ -1,0 +1,7 @@
+******Determine the volume of gas from temperature and pressure******
+
+Statement: Write a program for a PIC16877A microcontroller to read the temperature and pressure from the respective temperature sensor and the pressure sensor and calculate the volume of gas in the chamber. Display the temperature, pressure, and volume on a 16x2 Dot matrix LCD
+as follows:
+
+_ _ Pa  _ _ K
+  _ _ cc

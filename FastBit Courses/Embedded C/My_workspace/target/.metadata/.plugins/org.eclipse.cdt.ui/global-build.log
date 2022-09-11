@@ -1,21 +1,31 @@
-09:48:19 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+00:15:44 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -save-temps -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "003AddTwoNumbers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\003AddTwoNumbers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003AddTwoNumbers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 003AddTwoNumbers.elf
+ 
 arm-none-eabi-size   003AddTwoNumbers.elf 
+arm-none-eabi-objdump -h -S  003AddTwoNumbers.elf  > "003AddTwoNumbers.list"
    text	   data	    bss	    dec	    hex	filename
-   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
 Finished building: default.size.stdout
  
-10:10:04 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+Finished building: 003AddTwoNumbers.list
+ 
+00:16:08 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
 make -j8 all 
 arm-none-eabi-size   003AddTwoNumbers.elf 
    text	   data	    bss	    dec	    hex	filename
-   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
 Finished building: default.size.stdout
  
-10:15:28 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+17:46:44 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
 make -j8 all 
 arm-none-eabi-size   003AddTwoNumbers.elf 
    text	   data	    bss	    dec	    hex	filename
-   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
 Finished building: default.size.stdout
  

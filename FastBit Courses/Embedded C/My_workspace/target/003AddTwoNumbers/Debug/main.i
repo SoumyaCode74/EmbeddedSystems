@@ -2962,12 +2962,14 @@ _putchar_unlocked(int _c)
 
 
 # 25 "../Src/main.c"
-int g_num_1 = 100;
-int g_num_2 = -200;
+unsigned int g_num_1;
+unsigned int g_num_2;
 int sum;
 int main(void)
 {
 
+ g_num_1 = 100;
+ g_num_2 = 200;
  sum = g_num_1 + g_num_2;
  printf("The sum of %d and %d is: %d\n", g_num_1, g_num_2, sum);
  for(;;);

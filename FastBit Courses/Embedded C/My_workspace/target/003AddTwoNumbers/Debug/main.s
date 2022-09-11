@@ -17,19 +17,19 @@
 .Ltext0:
 	.cfi_sections	.debug_frame
 	.global	g_num_1
-	.section	.data.g_num_1,"aw"
+	.section	.bss.g_num_1,"aw",%nobits
 	.align	2
 	.type	g_num_1, %object
 	.size	g_num_1, 4
 g_num_1:
-	.word	100
+	.space	4
 	.global	g_num_2
-	.section	.data.g_num_2,"aw"
+	.section	.bss.g_num_2,"aw",%nobits
 	.align	2
 	.type	g_num_2, %object
 	.size	g_num_2, 4
 g_num_2:
-	.word	-200
+	.space	4
 	.global	sum
 	.section	.bss.sum,"aw",%nobits
 	.align	2
@@ -61,16 +61,25 @@ main:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 31 16
+	.loc 1 31 10
+	ldr	r3, .L3
+	movs	r2, #100
+	str	r2, [r3]
+	.loc 1 32 10
+	ldr	r3, .L3+4
+	movs	r2, #200
+	str	r2, [r3]
+	.loc 1 33 16
 	ldr	r3, .L3
 	ldr	r2, [r3]
 	ldr	r3, .L3+4
 	ldr	r3, [r3]
 	add	r3, r3, r2
-	.loc 1 31 6
-	ldr	r2, .L3+8
-	str	r3, [r2]
-	.loc 1 32 2
+	mov	r2, r3
+	.loc 1 33 6
+	ldr	r3, .L3+8
+	str	r2, [r3]
+	.loc 1 34 2
 	ldr	r3, .L3
 	ldr	r1, [r3]
 	ldr	r3, .L3+4
@@ -80,7 +89,7 @@ main:
 	ldr	r0, .L3+12
 	bl	printf
 .L2:
-	.loc 1 33 2 discriminator 1
+	.loc 1 35 2 discriminator 1
 	b	.L2
 .L4:
 	.align	2
@@ -167,8 +176,8 @@ main:
 	.4byte	.LASF969
 	.byte	0x1
 	.byte	0x19
-	.byte	0x5
-	.4byte	0x61
+	.byte	0xe
+	.4byte	0x68
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_num_1
@@ -176,8 +185,8 @@ main:
 	.4byte	.LASF970
 	.byte	0x1
 	.byte	0x1a
-	.byte	0x5
-	.4byte	0x61
+	.byte	0xe
+	.4byte	0x68
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_num_2

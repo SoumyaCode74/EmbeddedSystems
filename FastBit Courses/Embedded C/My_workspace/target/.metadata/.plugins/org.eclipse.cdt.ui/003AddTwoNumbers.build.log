@@ -1,10 +1,10 @@
-10:15:28 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+17:46:44 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
 make -j8 all 
 arm-none-eabi-size   003AddTwoNumbers.elf 
    text	   data	    bss	    dec	    hex	filename
-   5372	    116	   1588	   7076	   1ba4	003AddTwoNumbers.elf
+   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
 Finished building: default.size.stdout
  
 
-10:15:28 Build Finished. 0 errors, 0 warnings. (took 159ms)
+17:46:44 Build Finished. 0 errors, 0 warnings. (took 306ms)
 

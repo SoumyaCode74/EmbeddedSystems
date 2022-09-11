@@ -1,4 +1,4 @@
-unsigned int d = 250;
+unsigned int d = 100;
 
 void setup() {
   // put your setup code here, to run once:
@@ -6,12 +6,17 @@ void setup() {
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
+  pinMode(13, OUTPUT);
 
 }
 
 void loop() {
+  digitalWrite(13, HIGH);
+  delay(d);
+  digitalWrite(13, LOW);
+  delay(d);
   // put your main code here, to run repeatedly:
-  for(int i = 2; i  <= 5; i++)
+  /*for(int i = 2; i  <= 5; i++)
   {
     digitalWrite(i, HIGH);
     delay(d);
@@ -24,6 +29,6 @@ void loop() {
     delay(d);
     digitalWrite(i, LOW);
 //    delay(d);
-  }
+  }*/
 
 }
