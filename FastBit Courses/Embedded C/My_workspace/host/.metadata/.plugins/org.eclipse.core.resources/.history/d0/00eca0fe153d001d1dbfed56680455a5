@@ -10,6 +10,7 @@
 void main()
 {
 	char chr1, chr2, chr3, chr4, chr5, chr6;
+	int code1, code2, code3, code4, code5, code6;
 
 	printf("Enter 6 characters of your choice: ");
 	fflush(stdout);

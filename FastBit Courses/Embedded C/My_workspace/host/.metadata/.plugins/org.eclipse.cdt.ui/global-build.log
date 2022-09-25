@@ -1,8 +1,7 @@
-02:33:36 **** Incremental Build of configuration Debug for project ASCII ****
+02:36:59 **** Incremental Build of configuration Debug for project ASCII ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
 ..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
  void main()
       ^~~~
 gcc -o ASCII.exe main.o 
-Info: Nothing to build for ASCII
