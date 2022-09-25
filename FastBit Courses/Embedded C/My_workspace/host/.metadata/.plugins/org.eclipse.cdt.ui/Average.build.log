@@ -1,0 +1,10 @@
+02:17:57 **** Incremental Build of configuration Debug for project Average ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main_new.o "..\\main_new.c" 
+..\main_new.c:11:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(void)
+      ^~~~
+gcc -o Average.exe main_new.o 
+
+02:17:57 Build Finished. 0 errors, 1 warnings. (took 363ms)
+

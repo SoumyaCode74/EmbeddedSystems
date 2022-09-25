@@ -1,31 +1,66 @@
-00:15:44 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+23:39:39 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -save-temps -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
    22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
       |    ^~~~~~~
-arm-none-eabi-gcc -o "003AddTwoNumbers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\003AddTwoNumbers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003AddTwoNumbers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 003AddTwoNumbers.elf
+arm-none-eabi-gcc -o "004FloatingPoint.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\004FloatingPoint\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="004FloatingPoint.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 004FloatingPoint.elf
  
-arm-none-eabi-size   003AddTwoNumbers.elf 
-arm-none-eabi-objdump -h -S  003AddTwoNumbers.elf  > "003AddTwoNumbers.list"
+arm-none-eabi-size   004FloatingPoint.elf 
+arm-none-eabi-objdump -h -S  004FloatingPoint.elf  > "004FloatingPoint.list"
    text	   data	    bss	    dec	    hex	filename
-   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
 Finished building: default.size.stdout
  
-Finished building: 003AddTwoNumbers.list
+Finished building: 004FloatingPoint.list
  
-00:16:08 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+23:40:53 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
 make -j8 all 
-arm-none-eabi-size   003AddTwoNumbers.elf 
+arm-none-eabi-size   004FloatingPoint.elf 
    text	   data	    bss	    dec	    hex	filename
-   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
 Finished building: default.size.stdout
  
-17:46:44 **** Incremental Build of configuration Debug for project 003AddTwoNumbers ****
+23:50:18 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
 make -j8 all 
-arm-none-eabi-size   003AddTwoNumbers.elf 
+arm-none-eabi-size   004FloatingPoint.elf 
    text	   data	    bss	    dec	    hex	filename
-   5384	    108	   1596	   7088	   1bb0	003AddTwoNumbers.elf
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+Finished building: default.size.stdout
+ 
+23:51:15 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+make -j8 all 
+arm-none-eabi-size   004FloatingPoint.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+Finished building: default.size.stdout
+ 
+23:51:49 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+make -j8 all 
+arm-none-eabi-size   004FloatingPoint.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+Finished building: default.size.stdout
+ 
+23:51:57 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+make -j8 all 
+arm-none-eabi-size   004FloatingPoint.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+Finished building: default.size.stdout
+ 
+23:52:16 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+make -j8 all 
+arm-none-eabi-size   004FloatingPoint.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+Finished building: default.size.stdout
+ 
+23:52:36 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+make -j8 all 
+arm-none-eabi-size   004FloatingPoint.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
 Finished building: default.size.stdout
  

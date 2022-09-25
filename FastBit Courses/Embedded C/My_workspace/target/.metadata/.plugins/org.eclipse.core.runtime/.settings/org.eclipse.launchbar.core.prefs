@@ -1,11 +1,12 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_Self_Bare Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld Debug (1),org.eclipse.launchbar.core.descriptorType.default\:001HelloWorld Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002SizeOf Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003AddTwoNumbers Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld Debug (1),org.eclipse.launchbar.core.descriptorType.default\:001HelloWorld Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002SizeOf Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003AddTwoNumbers Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:004FloatingPoint
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld\ Debug\ (1)/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld\ Debug\ (1)/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003AddTwoNumbers\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:004FloatingPoint/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:001HelloWorld\ Debug\ (1)/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:001HelloWorld\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:001HelloWorld\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

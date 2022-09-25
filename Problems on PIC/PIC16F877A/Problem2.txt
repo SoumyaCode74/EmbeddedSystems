@@ -1,0 +1,9 @@
+*****Read from heater and display temperature on LCD. Alarm if temperature is above/below a specified limit with message*****
+
+Statement: Write a program to continuously read the temperature from the thermal sensor. Display the temperature on LCD in Kelvin in first line of a 16x2 DTM LCD.
+
+Conditions: 
+1) When temperature is above a setvalue, display HIGH TEMPERATURE on second line. 
+2) When temperature is within 10 counts of maximum preset temperature, sound the alarm with frequency 0.5 Hz and display OVERLOAD!. Send heater shutdown signal.
+3) When temperature is below a setvalue, display LOW TEMPERATURE on second line. Send heater start signal.
+4) Assign RB0 as a manual start button of latch NO type, assign RB1 as a manual stop button of latching NC type.
