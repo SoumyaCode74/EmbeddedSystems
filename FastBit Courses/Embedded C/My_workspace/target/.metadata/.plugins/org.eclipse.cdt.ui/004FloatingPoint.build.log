@@ -1,4 +1,4 @@
-23:52:36 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+10:44:39 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
 make -j8 all 
 arm-none-eabi-size   004FloatingPoint.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   004FloatingPoint.elf
 Finished building: default.size.stdout
  
 
-23:52:36 Build Finished. 0 errors, 0 warnings. (took 155ms)
+10:44:39 Build Finished. 0 errors, 0 warnings. (took 173ms)
 

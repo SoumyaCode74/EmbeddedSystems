@@ -1,66 +1,69 @@
-23:39:39 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+22:01:22 **** Incremental Build of configuration Debug for project 005GlowLED ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   23 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
       |    ^~~~~~~
-arm-none-eabi-gcc -o "004FloatingPoint.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\004FloatingPoint\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="004FloatingPoint.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 004FloatingPoint.elf
+arm-none-eabi-gcc -o "005GlowLED.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\005GlowLED\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005GlowLED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 005GlowLED.elf
  
-arm-none-eabi-size   004FloatingPoint.elf 
-arm-none-eabi-objdump -h -S  004FloatingPoint.elf  > "004FloatingPoint.list"
+arm-none-eabi-size   005GlowLED.elf 
+arm-none-eabi-objdump -h -S  005GlowLED.elf  > "005GlowLED.list"
    text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+    780	      8	   1568	   2356	    934	005GlowLED.elf
 Finished building: default.size.stdout
  
-Finished building: 004FloatingPoint.list
+Finished building: 005GlowLED.list
  
-23:40:53 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+22:01:31 **** Incremental Build of configuration Debug for project 005GlowLED ****
 make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
+arm-none-eabi-size   005GlowLED.elf 
    text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+    780	      8	   1568	   2356	    934	005GlowLED.elf
 Finished building: default.size.stdout
  
-23:50:18 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+23:52:31 **** Incremental Build of configuration Debug for project 005GlowLED ****
 make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   23 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c:40:1: error: expected identifier or '(' before '}' token
+   40 | }
+      | ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:53:18 **** Incremental Build of configuration Debug for project 005GlowLED ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   23 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "005GlowLED.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\005GlowLED\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005GlowLED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 005GlowLED.elf
+ 
+arm-none-eabi-size   005GlowLED.elf 
+arm-none-eabi-objdump -h -S  005GlowLED.elf  > "005GlowLED.list"
    text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+    748	      8	   1568	   2324	    914	005GlowLED.elf
 Finished building: default.size.stdout
  
-23:51:15 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
+Finished building: 005GlowLED.list
+ 
+00:08:06 **** Incremental Build of configuration Debug for project 005GlowLED ****
 make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   23 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "005GlowLED.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\Embedded C\My_workspace\target\005GlowLED\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005GlowLED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 005GlowLED.elf
+ 
+arm-none-eabi-size   005GlowLED.elf 
+arm-none-eabi-objdump -h -S  005GlowLED.elf  > "005GlowLED.list"
    text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
+    760	      8	   1568	   2336	    920	005GlowLED.elf
 Finished building: default.size.stdout
  
-23:51:49 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
-make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
-Finished building: default.size.stdout
- 
-23:51:57 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
-make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
-Finished building: default.size.stdout
- 
-23:52:16 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
-make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
-Finished building: default.size.stdout
- 
-23:52:36 **** Incremental Build of configuration Debug for project 004FloatingPoint ****
-make -j8 all 
-arm-none-eabi-size   004FloatingPoint.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15612	    472	   1584	  17668	   4504	004FloatingPoint.elf
-Finished building: default.size.stdout
+Finished building: 005GlowLED.list
  

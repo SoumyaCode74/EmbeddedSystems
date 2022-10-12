@@ -1,0 +1,14 @@
+Calculate address of clock enable for PORTD, here it is GPIOD (RCC AHB1 peripheral clock enable register (RCC_AHB1ENR)
+RCC register base address = 0x4002 3800
+AHB1ENR offset = 0x30 == 0x0000 0030
+Hence address of RCC_AHB1ENR is 0x4002 3800 + 0x30 = 0x4002 3830
+
+Calculate address of GPIOD Mode Register (GPIOD_MODER)
+
+GPIOD register base address = 0x4002 0C00; GPIOD_MODER offset = 0x00
+Hence address of GPIOD_MODER = 0x4002 0C00 + 0x00 = 0x4002 0C00
+
+Calculate address of GPIOD Output Data Register (GPIOD_ODR)
+
+GPIOD_ODR offset = 0x14
+Hence address of GPIOD_ODR is 0x4002 0C00 + 0x14 = 0x4002 0C14
