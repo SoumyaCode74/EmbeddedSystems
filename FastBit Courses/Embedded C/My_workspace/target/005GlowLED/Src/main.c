@@ -17,7 +17,6 @@
  */
 
 #include <stdint.h>
-#include <stdio.h>
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -25,17 +24,13 @@
 
 int main(void)
 {
-    /* Loop forever */
-//	uint32_t* clock_en = (uint32_t*)RCC_BASE_ADDRESS + 0x30;
 	uint32_t* pClock_en = (uint32_t*)0x40023830;
-//	uint32_t* portd_mode = (uint32_t*)GPIOD_BASE_ADDRESS + 0x00;
 	uint32_t* pPortd_mode = (uint32_t*)0x40020C00;
-//	uint32_t* portd_output_data = (uint32_t*)GPIOD_BASE_ADDRESS + 0x14;
 	uint32_t* pPortd_output_data = (uint32_t*)0x40020C14;
 
 	*pClock_en |= 0x08;  //Set bit field 3 for GPIODEN in RCC_AHB1ENR
 	*pPortd_mode &= ~0xFF000000; //Clear the positions of GPIOD_MODERx, x=12 to 15
 	*pPortd_mode |= 0x55000000; //Set GPIOD_MODERx, x=12 to 15 section of
 								//GPIOD_MODER to 01 (General output)
-	*pPortd_output_data |= 0x00001000; //Write 1 to PD12
+	*pPortd_output_data |= 0x00001000; //Turn ON LED connected to pin 12 of GPIOD port
 }
