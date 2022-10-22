@@ -43,6 +43,16 @@ void PacketDecoder(packet_t *pData, uint32_t packetData)
 	pData->shortAddr = (packetData & (0x03 << 28)) >> 28;
 	pData->addrMode  = (packetData & (0x01 << 30)) >> 30;
 
+	printf("Memory addresses\n");
+	printf("%#x\n",(uint32_t *)&pData->crc);
+	printf("%#x\n",(uint32_t *)&pData->status);
+	printf("%#x\n",(uint32_t *)&pData->payload);
+	printf("%#x\n",(uint32_t *)&pData->bat);
+	printf("%#x\n",(uint32_t *)&pData->sensor);
+	printf("%#x\n",(uint32_t *)&pData->longAddr);
+	printf("%#x\n",(uint32_t *)&pData->shortAddr);
+	printf("%#x\n",(uint32_t *)&pData->addrMode);
+
 	printf("CRC: %#x\n", pData->crc);
 	printf("Status: %#x\n", pData->status);
 	printf("Payload: %#x\n", pData->payload);
@@ -51,4 +61,6 @@ void PacketDecoder(packet_t *pData, uint32_t packetData)
 	printf("Long Address: %#x\n", pData->longAddr);
 	printf("Short Address: %#x\n", pData->shortAddr);
 	printf("Address Mode: %#x\n", pData->addrMode);
+	printf("Memory bytes consumed by data structure: %I64u\n", sizeof(*pData));
+	printf("Reason: crc, status, bat, sensor: 4; longAddr, shortAddr, addrMode: 4; payload: 2.\n1 uint16 or 2 uint8 can be fitted, so no padding introduced");
 }
