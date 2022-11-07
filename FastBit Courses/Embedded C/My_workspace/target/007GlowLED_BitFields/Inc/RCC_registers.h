@@ -5,10 +5,11 @@
  *      Author: soumy
  */
 
+#include <stdint.h>
 #ifndef RCC_REGISTERS_H_
 #define RCC_REGISTERS_H_
 
-#include <stdint.h>
+#define __IO volatile
 
 #define ADDR_RCC_BASE 			0x40023800
 #define RCC_CR_OFFSET 			0x00
@@ -38,36 +39,33 @@
 #define CLOCK_ENABLE 			0x01
 #define CLOCK_DISABLE 			0x00
 
+#define RCC_AHB1EN_R           ((volatile RCC_AHB1ENR_TypeDef *)(ADDR_RCC_BASE + RCC_AHB1ENR_OFFSET))
+
 typedef struct
 {
-	uint32_t gpioa_en   	:1;
-	uint32_t gpiob_en   	:1;
-	uint32_t gpioc_en   	:1;
-	uint32_t gpiod_en   	:1;
-	uint32_t gpioe_en   	:1;
-	uint32_t gpiof_en   	:1;
-	uint32_t gpiog_en   	:1;
-	uint32_t gpioh_en   	:1;
-	uint32_t gpioi_en   	:1;
-	uint32_t crc_en     	:1;
-	uint32_t bkpsram_en 	:1;
-	uint32_t ccmdataram_en 	:1;
-	uint32_t dma1_en 	:1;
-	uint32_t dma2_en 	:1;
-	uint32_t dma2d_en 	:1;
-	uint32_t ethmac_en 	:1;
-	uint32_t ethmactx_en 	:1;
-	uint32_t ethmacrx_en 	:1;
-	uint32_t ethmacptp_en 	:1;
-	uint32_t otghs_en 	:1;
-	uint32_t otghsulpi_en 	:1;
-
-	uint32_t reserved_11 	:1;
-	uint32_t reserved_13 	:5;
-	uint32_t reserved_19 	:1;
-	uint32_t reserved_24 	:1;
-	uint32_t reserved_31 	:1;
-}RCC_AHB1ENR_t;
+	__IO uint32_t gpioa_en   	:1;
+	__IO uint32_t gpiob_en   	:1;
+	__IO uint32_t gpioc_en   	:1;
+	__IO uint32_t gpiod_en   	:1;
+	__IO uint32_t gpioe_en   	:1;
+	__IO uint32_t gpiof_en   	:1;
+	__IO uint32_t gpiog_en   	:1;
+	__IO uint32_t gpioh_en   	:1;
+	__IO uint32_t gpioi_en   	:1;
+	__IO uint32_t crc_en     	:1;
+	__IO uint32_t bkpsram_en 	:1;
+	__IO uint32_t ccmdataram_en 	:1;
+	__IO uint32_t dma1_en 	:1;
+	__IO uint32_t dma2_en 	:1;
+	__IO uint32_t dma2d_en 	:1;
+	__IO uint32_t ethmac_en 	:1;
+	__IO uint32_t ethmactx_en 	:1;
+	__IO uint32_t ethmacrx_en 	:1;
+	__IO uint32_t ethmacptp_en 	:1;
+	__IO uint32_t otghs_en 	:1;
+	__IO uint32_t otghsulpi_en 	:1;
+	__IO uint16_t reserved[1];
+}RCC_AHB1ENR_TypeDef;
 
 
 #endif /* RCC_REGISTERS_H_ */

@@ -20,13 +20,8 @@
 
 #include "GPIO_registers.h"
 #include "RCC_registers.h"
+#include "General.h"
 
-#define ADDR_GPIOx_MODER 	(GPIOx_MODER_t *)(ADDR_GPIOD_BASE + GPIOx_MODER_OFFSET)
-#define ADDR_GPIOx_ODR   	(GPIOx_ODR_t *)(ADDR_GPIOD_BASE + GPIOx_ODR_OFFSET)
-#define ADDR_AHB1ENR     	(RCC_AHB1ENR_t *)(ADDR_RCC_BASE + RCC_AHB1ENR_OFFSET)
-
-#define DELAY_HIGH			300000
-#define DELAY_LOW  			200000
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP) && 0
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -35,54 +30,53 @@
 int main(void)
 {
     /* Loop forever */
-	GPIOx_MODER_t volatile *const pMode = ADDR_GPIOx_MODER;
-	GPIOx_ODR_t   volatile *const pData = ADDR_GPIOx_ODR;
-	RCC_AHB1ENR_t volatile *const pClk  = ADDR_AHB1ENR;
+
 	while(1)
 	{
-		pClk->gpiod_en = PIN_SET_HIGH;
-		pMode->moder12 = PIN_SET_HIGH;
-		pMode->moder13 = PIN_SET_HIGH;
-		pMode->moder14 = PIN_SET_HIGH;
-		pMode->moder15 = PIN_SET_HIGH;
 
-		pData->odr12 = PIN_SET_HIGH;
-		pData->odr13 = PIN_SET_HIGH;
-		pData->odr14 = PIN_SET_HIGH;
-		pData->odr15 = PIN_SET_HIGH;
-		for(uint32_t volatile i = 1;i <= DELAY_HIGH; i++);
-		pData->odr12 = PIN_SET_LOW;
-		pData->odr13 = PIN_SET_LOW;
-		pData->odr14 = PIN_SET_LOW;
-		pData->odr15 = PIN_SET_LOW;
-		for(uint32_t volatile i = 1;i <= DELAY_HIGH; i++);
+		RCC_AHB1EN_R->gpiod_en = PIN_SET_HIGH;
+		GPIOD_REG->MODER.moder12 = PIN_SET_HIGH;
+		GPIOD_REG->MODER.moder13 = PIN_SET_HIGH;
+		GPIOD_REG->MODER.moder14 = PIN_SET_HIGH;
+		GPIOD_REG->MODER.moder15 = PIN_SET_HIGH;
 
-		pData->odr12 = PIN_SET_HIGH;
-		pData->odr13 = PIN_SET_HIGH;
-		pData->odr14 = PIN_SET_HIGH;
-		pData->odr15 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr12 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr13 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr14 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr15 = PIN_SET_HIGH;
 		for(uint32_t volatile i = 1;i <= DELAY_HIGH; i++);
-		pData->odr12 = PIN_SET_LOW;
-		pData->odr13 = PIN_SET_LOW;
-		pData->odr14 = PIN_SET_LOW;
-		pData->odr15 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr12 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr13 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr14 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr15 = PIN_SET_LOW;
 		for(uint32_t volatile i = 1;i <= DELAY_HIGH; i++);
 
-		pData->odr12 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr12 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr13 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr14 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr15 = PIN_SET_HIGH;
+		for(uint32_t volatile i = 1;i <= DELAY_HIGH; i++);
+		GPIOD_REG->ODR.odr12 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr13 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr14 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr15 = PIN_SET_LOW;
+		for(uint32_t volatile i = 1;i <= DELAY_HIGH; i++);
+
+		GPIOD_REG->ODR.odr12 = PIN_SET_HIGH;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr13 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr13 = PIN_SET_HIGH;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr14 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr14 = PIN_SET_HIGH;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr15 = PIN_SET_HIGH;
+		GPIOD_REG->ODR.odr15 = PIN_SET_HIGH;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr15 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr15 = PIN_SET_LOW;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr14 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr14 = PIN_SET_LOW;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr13 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr13 = PIN_SET_LOW;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
-		pData->odr12 = PIN_SET_LOW;
+		GPIOD_REG->ODR.odr12 = PIN_SET_LOW;
 		for(uint32_t volatile i = 1;i <= DELAY_LOW; i++);
 
 	}
