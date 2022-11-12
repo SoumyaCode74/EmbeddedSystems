@@ -9,6 +9,31 @@ void systick_init(void){
 	//Disable systick interrupt request
 	SYSTICK->STCSR &= ~(TICK_EXCEPTION);
 }
+void delay_time_hr(uint32_t delay_hr, uint32_t clk)
+{
+	for(uint32_t volatile i = 0; i < delay_hr; i++)
+	{
+		delay_time_min(i*60, clk);
+	}
+}
+
+
+void delay_time_min(uint32_t delay_min, uint32_t clk)
+{
+	for(uint32_t volatile i = 0; i < delay_min; i++)
+	{
+		delay_time_sec(i*60, clk);
+	}
+}
+
+void delay_time_sec(uint32_t delay_s, uint32_t clk)
+{
+	for(uint32_t volatile i = 0; i < delay_s;i++)
+	{
+		delay_time_ms(1000, clk);
+	}
+}
+
 void delay_time_ms(uint32_t delay_ms, uint32_t clk)
 {
 	uint32_t N = (clk/1000U)*delay_ms;
