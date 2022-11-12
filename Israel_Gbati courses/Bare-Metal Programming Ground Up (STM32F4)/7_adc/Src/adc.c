@@ -30,13 +30,17 @@ void pa1_ADC1_init(void)
 
 }
 
+void start_conversion(void){
+	//Check and start conversion
+		while((ADC1->SR & (1U<<4)) == 0){
+			ADC1->CR2 |= ADC1_START;
+			for(uint32_t volatile i = 1; i <= 1000; i++);
+		}
+}
+
 uint32_t perform_conversion(void)
 {
-	//Check and start conversion
-	while((ADC1->SR & (1U<<4)) == 0){
-		ADC1->CR2 |= ADC1_START;
-		for(uint32_t volatile i = 1; i <= 1000; i++);
-	}
+
 	ADC1->SR &= ~(1U<<4); //Clear the start conversion status bit
 	while((ADC1->SR & ADC1_EOC) == 0); //Wait for conversion to end
 	return ADC1->DR; //Return the converted value

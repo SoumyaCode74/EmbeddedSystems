@@ -7,6 +7,7 @@
 #include "stm32f4xx.h"
 #include "usart.h"
 
+
 extern void USART2_init(uint32_t PeriphClk, uint32_t BaudRate) {
 
 	/*************Configure gpio pin for usart operation***************/
@@ -48,6 +49,11 @@ extern void USART2_write (int ch) {
 int __io_putchar(int ch){
 	USART2_write(ch);
 	return ch;
+}
+
+unsigned char USART2_read(void) {
+    while (!(USART2->SR & 0x0020)) {}   // wait until character arrives
+    return USART2->DR;
 }
 
 extern void delayMs(int delay) {
