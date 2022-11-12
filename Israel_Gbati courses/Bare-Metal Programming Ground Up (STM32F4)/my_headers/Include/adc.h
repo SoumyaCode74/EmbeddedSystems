@@ -32,6 +32,8 @@
 
 void pa1_ADC1_init(void);
 
+void start_conversion(void);
+
 uint32_t perform_conversion(void);
 
 uint32_t input_voltage(uint32_t, uint8_t, uint8_t);
