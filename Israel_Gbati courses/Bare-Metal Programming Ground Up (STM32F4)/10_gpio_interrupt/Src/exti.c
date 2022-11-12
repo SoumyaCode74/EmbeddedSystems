@@ -28,7 +28,7 @@ void pc13_exti_init(void)
 	SYSCFG->EXTICR[3] 	&= ~(15U << 4);
 	SYSCFG->EXTICR[3] 	|=  (1U << 5);
 	EXTI->IMR 			|= (1U << 13);
-	EXTI->FTSR			|= (1U << 13);
+	EXTI->RTSR			|= (1U << 13);
 //	NVIC_EnableIRQ(EXTI15_10_IRQn);
 	NVIC->ISER[1]       |= (1U << 8);
 	__enable_irq();
