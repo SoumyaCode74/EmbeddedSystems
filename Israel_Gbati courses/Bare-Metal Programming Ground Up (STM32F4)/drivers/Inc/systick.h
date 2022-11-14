@@ -28,6 +28,8 @@ typedef struct{
 
 void systick_init(void);
 
+void systick_init_interrupt_ms(uint32_t, uint32_t);
+
 void delay_time_hr(uint32_t, uint32_t);
 
 void delay_time_min(uint32_t, uint32_t);

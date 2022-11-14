@@ -14,6 +14,8 @@
 #define DELAY_LOW  			200000UL
 #define SMALL_DELAY			1000U
 #define HSICLK				(16000000UL + (RCC->CR & (0xFF << 8)))
+#define BD_9600				(9600U)
+#define BD_115200			(115200UL)
 //#define SYSCLK				16000000UL //Default internal RC oscillator frequency = 16 MHz
 
 #endif /* GENERAL_H_ */
