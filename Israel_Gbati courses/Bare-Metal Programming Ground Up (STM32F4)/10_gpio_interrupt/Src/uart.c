@@ -35,7 +35,25 @@ extern void USART2_init(uint32_t PeriphClk, uint32_t BaudRate) {
     USART2->CR1 |= 0x2000;      // enable USART2
     */
 }
-
+void USART2_rx_interrupt_init(uint32_t PeriphClk, uint32_t Baud_rate)
+{
+	/*
+	 * Disable global interrupts
+	 * Enable clock to USART2
+	 * Set up USART2 for RX and TX with interrupt for RX
+	 * Activate the RXNIE interrupt bit in USART2_CR register
+	 * Identify IRQ number from NVIQ table
+	 * Enable interrupt from respective ISER register of NVIQ file
+	 * Enable global interrupts
+	 */
+	__disable_irq();
+	RCC->APB1ENR |= (1U << 17);
+	USART2_init(PeriphClk, Baud_rate);
+	USART2->CR1 |= (1U << 5);
+//	NVIC_EnableIRQ(USART2_IRQn);
+	NVIC->ISER[1] |= (1U << 6); //IRQ38 for USART2
+	__enable_irq();
+}
 void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate)
 {
 	USARTx->BRR = BAUD_RATE_SET(PeriphClk, BaudRate);
