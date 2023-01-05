@@ -55,19 +55,14 @@ static void USART2_RX_Callback(void)
 {
 	++times;
 	c = USART2->DR;
-	printf("Hello sugar-pie, you pressed key %c!\n\r",c);
-	printf("And you disturbed me %d times!! Now stop pinging!\n\r", times);
+	printf("Hello, you pressed key %c!\n\r",c);
+	printf("Times interrupted: %d\n\r", times);
 	LED_play(c);
-	/*GPIOA->ODR |= (1U << 5);
-	delay_time_ms(750, HSICLK);
-	GPIOA->ODR &= ~(1U << 5);*/
 }
 
 
 void LED_play(int value) {
     value %= 16;                    // cap the max count at 15
-
-//    printf("hello");
     for (; value > 0; value--) {
         GPIOA->BSRR = 0x00000020;   // turn on LED
         delay_time_ms(100, HSICLK);
