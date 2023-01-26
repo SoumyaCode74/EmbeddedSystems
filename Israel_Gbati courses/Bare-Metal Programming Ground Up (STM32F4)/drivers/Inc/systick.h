@@ -2,15 +2,16 @@
  * systick.h
  *
  *  Created on: 10-Nov-2022
- *      Author: soumy
+ *      Author: soumya
  */
 
 #ifndef SYSTICK_H_
 #define SYSTICK_H_
-#include <stm32f4xx.h>
+
 #include <stdint.h>
 
 #define __IO				volatile
+#define __I				volatile
 #define CLK_SOURCE			(1U<<2)
 #define TICK_EXCEPTION		(1U<<1)
 #define TICK_ENABLE			(1U<<0)
@@ -23,7 +24,7 @@ typedef struct{
 	__IO uint32_t STCSR;
 	__IO uint32_t STRVR;
 	__IO uint32_t STCVR;
-	__IO uint32_t STCR;
+	__I  uint32_t STCR;
 }Systick_TypeDef;
 
 void systick_init(void);

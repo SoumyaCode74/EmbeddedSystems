@@ -5,9 +5,8 @@
  *      Author: soumy
  */
 
-#include "stm32f4xx.h"
-#include "adc.h"
-#include "General.h"
+#include "../Inc/adc.h"
+#include "../Inc/General.h"
 #include <math.h>
 
 void pa0_ADC1_init(void)

@@ -1,5 +1,4 @@
-#include "systick.h"
-#include <stdint.h>
+#include "../Inc/systick.h"
 
 void systick_init(void){
 	//Provide clock source for Systick

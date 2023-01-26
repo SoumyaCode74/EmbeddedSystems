@@ -29,7 +29,7 @@
 #define ADC1_CH15	(0x0FU)
 
 #define VREF_5V		(5U)
-#define VREF_3V3	(3.3U)
+#define VREF_3V3	(3.3f)
 
 void pa0_ADC1_init(void);
 

@@ -13,7 +13,7 @@
 #define DELAY_HIGH			500000UL
 #define DELAY_LOW  			200000UL
 #define SMALL_DELAY			1000U
-#define HSICLK				(16000000UL + (RCC->CR & (0xFF << 8)))
+#define HSICLK				(16000000UL)
 #define BD_9600				(9600U)
 #define BD_115200			(115200UL)
 #define BIT0				(1U << 0)
@@ -48,6 +48,53 @@
 #define BIT29				(1U << 29)
 #define BIT30				(1U << 30)
 #define BIT31				(1U << 31)
+
+#define NVIC				((NVIC_TypeDef *)0xE000E100UL)
+#define RCC					((RCC_TypeDef *)0x40023800UL)
+#define GPIOA				((GPIO_TypeDef *)0x40020000UL)
+#define GPIOB				((GPIO_TypeDef *)0x40020400UL)
+#define GPIOC				((GPIO_TypeDef *)0x40020800UL)
+#define GPIOD				((GPIO_TypeDef *)0x40020C00UL)
+#define GPIOE				((GPIO_TypeDef *)0x40021000UL)
+
+typedef struct{
+	uint32_t reserved[12];
+	volatile uint32_t AHB1ENR;
+	uint32_t reserved1[3];
+	volatile uint32_t APB1ENR;
+	volatile uint32_t APB2ENR;
+}RCC_TypeDef;
+
+typedef struct{
+	volatile uint32_t ISER[8];
+	uint32_t reserved1[24];
+	volatile uint32_t ICER[8];
+	uint32_t reserved2[24];
+	volatile uint32_t ISPR[8];
+	uint32_t reserved3[24];
+	volatile uint32_t ICPR[8];
+	uint32_t reserved4[24];
+	volatile uint32_t IABR[8];
+	uint32_t reserved5[24];
+	volatile uint32_t IPR[60];
+	uint32_t reserved6[643];
+	volatile uint32_t STIR;
+}NVIC_TypeDef;
+
+typedef struct{
+	volatile uint32_t MODER;
+	volatile uint32_t OYTPER;
+	volatile uint32_t OSPEEDR;
+	volatile uint32_t PUPDR;
+	volatile uint32_t IDR;
+	volatile uint32_t ODR;
+	volatile uint32_t BSRR;
+	volatile uint32_t LCKR;
+	volatile uint32_t AFR[2];
+}GPIO_TypeDef;
+
+void activate_floating_point_unit(void);
+
 
 //#define SYSCLK				16000000UL //Default internal RC oscillator frequency = 16 MHz
 
