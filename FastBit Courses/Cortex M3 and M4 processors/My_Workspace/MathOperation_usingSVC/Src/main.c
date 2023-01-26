@@ -35,8 +35,14 @@
 #define CPACR						(*(uint32_t *)(0xE000ED88U))
 #define CFSR						(*(uint32_t *)(0xE000ED28U))
 
-//The following macro to handle division-by-zero situation
+/*The following macro to handle division-by-zero situation*/
 #define DIV_BY_ZERO       			1
+/* Macro FIRST_OPERAND for value of variable 'a' */
+#define FIRST_OPERAND				100
+/* Macro FIRST_OPERAND for value of variable 'b' */
+#define SECOND_OPERAND				0
+/* Macro CHOICE for Supervisor call number */
+#define CHOICE						39
 
 //Define the register pointers to configure division-by-zero fault
 #if DIV_BY_ZERO
@@ -48,10 +54,13 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
+int32_t a = FIRST_OPERAND;
+int32_t b = SECOND_OPERAND;
+
 int32_t addition(int32_t, int32_t);
 int32_t subtraction(int32_t, int32_t);
 int32_t multiplication(int32_t, int32_t);
-float division(int32_t, int32_t);
+int32_t division(int32_t, int32_t);
 
 void delay(uint32_t);
 
@@ -74,20 +83,34 @@ int main(void)
 #endif
 
 
-	int32_t a = 5;
-	int32_t b = 3;
+	uint8_t choice = CHOICE;
 	int32_t *pResult = (int32_t *)0x20000010;
 	/* Load the operands in R1 and R2 core registers */
 	/* This will allow the SVC handler program to retrieve from stack frame */
-	__asm volatile("MOV R1,%[op1]"::[op1]"r"(a));
-	__asm volatile("MOV R2,%[op2]"::[op2]"r"(b));
 	/*Raise SVC exception with the following SVC numbers
 	 * For addition, use #36
 	 * For subtraction, use #37
 	 * For multiplication, use #38
 	 * For division, use #39
 	 */
-	__asm volatile("SVC #39"); //Perform operation from SVC
+//	__asm volatile("SVC R0");
+	switch(choice){
+		case 36:
+			__asm volatile("SVC #36");
+			break;
+		case 37:
+			__asm volatile("SVC #37");
+			break;
+		case 38:
+			__asm volatile("SVC #38");
+			break;
+		case 39:
+			__asm volatile("SVC #39");
+			break;
+		default:
+			/* If none of the choices are valid, manually pend the usage exception */
+			SHCRS |= (1U << 12);
+	}
 	/* Save result to SRAM position at address pointed by pResult */
 	__asm volatile("STR R0,[%[des]]"::[des]"r"(pResult));
 	/* Turn ON onboard GREEN LED at PD12 for successful operation*/
@@ -104,6 +127,8 @@ int main(void)
  * the MSP, this is the solution
  */
 __attribute__ ((naked)) void SVC_Handler(void){
+	__asm volatile("MOV R8,%[op1]"::[op1]"r"(a));
+	__asm volatile("MOV R9,%[op2]"::[op2]"r"(b));
 	__asm volatile("MRS R0,MSP");
 	__asm volatile("B SVC_Handler_c");
 }
@@ -123,13 +148,13 @@ void SVC_Handler_c(uint32_t *pBaseStackAddress){
 	 * Load from R1 stack position to local variable a
 	 * Load from R2 stack position to local variable b
 	 */
-	uint32_t a; //First operand of operation
-	uint32_t b; //Second operand of operation
-	float result; //Variable to store result of operation
+	int32_t a1; //First operand of operation
+	int32_t a2; //Second operand of operation
+	int32_t result; //Variable to store result of operation
 	/* Load from R1 stacked value to local variable a */
-	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(a):[src]"r"(pBaseStackAddress + 1));
+//	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(a1):[src]"r"(pBaseStackAddress + 1));
 	/* Load from R2 stacked value to local variable b */
-	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(b):[src]"r"(pBaseStackAddress + 2));
+//	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(a2):[src]"r"(pBaseStackAddress + 2));
 
 	/*Perform math operation
 	 * Match SVC_number against desired operation
@@ -143,27 +168,44 @@ void SVC_Handler_c(uint32_t *pBaseStackAddress){
 	{
 		case 36:
 			/* Turn OFF GREEN LED connected to PD12 */
+			/* Load from R1 stacked value to local variable a */
+			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
+			/* Load from R2 stacked value to local variable b */
+			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
+
 			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = addition(a, b);
+			result = addition(a1, a2);
 			break;
 		case 37:
+			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
+			/* Load from R2 stacked value to local variable b */
+			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
+
 			/* Turn OFF GREEN LED connected to PD12 */
 			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = subtraction(a, b);
+			result = subtraction(a1, a2);
 			break;
 		case 38:
+			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
+			/* Load from R2 stacked value to local variable b */
+			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
+
 			/* Turn OFF GREEN LED connected to PD12 */
 			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = multiplication(a, b);
+			result = multiplication(a1, a2);
 			break;
 		case 39:
+			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
+			/* Load from R2 stacked value to local variable b */
+			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
+
 			/* Turn OFF GREEN LED connected to PD12 */
 			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = division(a, b);
+			result = division(a1, a2);
 			break;
 	}
 	/* Save the result in R3 position in stack */
@@ -173,27 +215,26 @@ void SVC_Handler_c(uint32_t *pBaseStackAddress){
 void UsageFault_Handler(void){
 	/* Check for division-by-zero exception */
 	if (CFSR & (1U << 25)){
-		/* Turn ON the onboard BLUE LED if detected */
+		/* Turn ON the onboard BLUE LED if division by zero is entrapped */
 		GPIOD_ODR |= (1U << 15);
 	}
 	else{
-		/* Turn ON the onboard ORANGE and RED LEDs for other exceptions */
-		GPIOD_ODR |= (1U << 13);
+		/* Turn ON the onboard RED and BLUE LEDs for other exceptions */
 		GPIOD_ODR |= (1U << 14);
+		GPIOD_ODR |= (1U << 15);
 	}
 }
 
 void HardFault_Handler(void){
 	if (CFSR & (1U << 25)){
-		/* Turn ON the onboard BLUE LED if detected */
+		/* Turn ON the onboard BLUE AND ORANGE LEDs if division by zero if entrapped through hardfault */
 		GPIOD_ODR |= (1U << 15);
+		GPIOD_ODR |= (1U << 13);
 	}
 	else{
-	/* Turn ON and OFF the RED LED */
-	GPIOD_ODR |= (1U << 14); // Turn ON
-	delay(50); //Wait for some time
-	GPIOD_ODR &= ~(1U << 14); //Turn OFF
-	delay(50); //Wait for some time
+	/* Turn ON the RED AND ORANGE LEDs for other exceptions*/
+	GPIOD_ODR |= (1U << 14);
+	GPIOD_ODR |= (1U << 13);
 	}
 }
 

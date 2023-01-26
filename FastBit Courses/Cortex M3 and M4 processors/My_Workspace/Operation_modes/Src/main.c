@@ -19,7 +19,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define FAULT		1
+#define FAULT		0
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP) && 0
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -50,15 +50,16 @@ int main(void){
 	initialise_monitor_handles();
 	printf("After interrupt\n");
 
-	for(;;);
 }
 
 void generate_interrupt(void){
 	uint32_t volatile *pISER0 = (uint32_t *)(0xE000E100);
-	uint32_t volatile *pSTIR  = (uint32_t *)(0xE000EF00);
+	uint32_t volatile *pISPR0  = (uint32_t *)(0XE000E200);
+//	uint32_t volatile *pSTIR  = (uint32_t *)(0xE000EF00);
 
 	*pISER0 |= (1U << 3);
-	*pSTIR	|= (0x03 & 0x1FF);
+	*pISPR0 |= (1U << 3);
+//	*pSTIR	|= (0x03 & 0x1FF);
 }
 
 void change_access_level_unpriv(void){
@@ -69,13 +70,13 @@ void change_access_level_unpriv(void){
 }
 void RTC_WKUP_IRQHandler(void)
 {
-	initialise_monitor_handles();
+//	initialise_monitor_handles();
 	printf("Handler mode\n");
 	__asm volatile(
 			"MRS %[reg], IPSR"
 			:[reg] "=r" (ipsr_value)
 			);
-	initialise_monitor_handles();
+//	initialise_monitor_handles();
 	printf("IRQ%d occured\n", ((ipsr_value & 0x1FF) - 16));
 
 }

@@ -26,7 +26,7 @@
 void fun_add(void);
 volatile static int result;
 void saturating_add(int, int);
-void data_copy(uint32_t, uint32_t, uint32_t);
+void data_copy(uint32_t *, uint32_t, uint32_t);
 int main(void)
 {
     /* Loop forever */
@@ -34,7 +34,8 @@ int main(void)
 	saturating_add(5, 10);
 
 	printf("Saturating addition");
-	data_copy(0x20000002, 0x48, 0x20000004);
+	uint32_t * pAddr = (uint32_t *)(0x20000002);
+	data_copy(pAddr, 0x48, 0x20000004);
 }
 
 void fun_add(void)
@@ -83,7 +84,7 @@ __asm volatile(
   );
  }
 
-void data_copy(uint32_t src, uint32_t srcdata, uint32_t destination){
+void data_copy(uint32_t *src, uint32_t srcdata, uint32_t destination){
 	__asm volatile(
 		"LDR R0,[%[src]]"
 		: : [src] "r"(src)
