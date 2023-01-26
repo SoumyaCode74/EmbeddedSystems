@@ -28,41 +28,33 @@
  */
 
 #include <stdint.h>
+
 #define PERIPH_BASE					(0x40020000UL)
 #define RCC_AHB1ENR					(*(uint32_t *)(PERIPH_BASE+0X3800+0X30))
 #define GPIOD_MODER					(*(uint32_t *)(PERIPH_BASE+0X0C00+0X00))
 #define GPIOD_ODR					(*(uint32_t *)(PERIPH_BASE+0X0C00+0X14))
-#define CPACR						(*(uint32_t *)(0xE000ED88U))
 #define CFSR						(*(uint32_t *)(0xE000ED28U))
 
-/*The following macro to handle division-by-zero situation*/
-#define DIV_BY_ZERO       			1
-/* Macro FIRST_OPERAND for value of variable 'a' */
-#define FIRST_OPERAND				100
-/* Macro FIRST_OPERAND for value of variable 'b' */
-#define SECOND_OPERAND				0
-/* Macro CHOICE for Supervisor call number */
-#define CHOICE						39
+//The following macro to handle division-by-zero situation
+#define DIV_BY_ZERO       				1
 
 //Define the register pointers to configure division-by-zero fault
 #if DIV_BY_ZERO
-#define CCR							(*(uint32_t *)(0xE000ED14U))
-#define SHCRS						(*(uint32_t *)(0xE000ED24U))
+#define CCR						(*(uint32_t *)(0xE000ED14U))
+#define SHCSR						(*(uint32_t *)(0xE000ED24U))
 #endif
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP) && 0
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
-int32_t a = FIRST_OPERAND;
-int32_t b = SECOND_OPERAND;
+/* Set this flag to 1 if invalid math operation choice is made */
+uint8_t choice_flag = 0;
 
 int32_t addition(int32_t, int32_t);
 int32_t subtraction(int32_t, int32_t);
 int32_t multiplication(int32_t, int32_t);
 int32_t division(int32_t, int32_t);
-
-void delay(uint32_t);
 
 int main(void)
 {
@@ -74,49 +66,34 @@ int main(void)
 	 */
 	GPIOD_MODER &= ~(0xFF << 24);
 	GPIOD_MODER |=  (0b01010101 << 24);
+	/* Turn OFF all on-board LEDs */
+	GPIOD_ODR &= ~(0x0F << 12);
 
 #if DIV_BY_ZERO
 	/* Enable usage fault handler */
-	SHCRS |= (1U << 18);
+	SHCSR |= (1U << 18);
 	/* Enable trap divide by zero exception */
 	CCR   |= (1U << 4);
 #endif
-
-
-	uint8_t choice = CHOICE;
+	
+	int32_t a = 5;
+	int32_t b = 3;
 	int32_t *pResult = (int32_t *)0x20000010;
 	/* Load the operands in R1 and R2 core registers */
 	/* This will allow the SVC handler program to retrieve from stack frame */
+	__asm volatile("MOV R1,%[op1]"::[op1]"r"(a));
+	__asm volatile("MOV R2,%[op2]"::[op2]"r"(b));
 	/*Raise SVC exception with the following SVC numbers
 	 * For addition, use #36
 	 * For subtraction, use #37
 	 * For multiplication, use #38
 	 * For division, use #39
 	 */
-//	__asm volatile("SVC R0");
-	switch(choice){
-		case 36:
-			__asm volatile("SVC #36");
-			break;
-		case 37:
-			__asm volatile("SVC #37");
-			break;
-		case 38:
-			__asm volatile("SVC #38");
-			break;
-		case 39:
-			__asm volatile("SVC #39");
-			break;
-		default:
-			/* If none of the choices are valid, manually pend the usage exception */
-			SHCRS |= (1U << 12);
-	}
+	__asm volatile("SVC #39"); //Perform operation from SVC
 	/* Save result to SRAM position at address pointed by pResult */
 	__asm volatile("STR R0,[%[des]]"::[des]"r"(pResult));
 	/* Turn ON onboard GREEN LED at PD12 for successful operation*/
 	GPIOD_ODR |= (1U << 12);
-	/* Loop forever */
-	for(;;);
 }
 /*
  * Reason for making the SVC Handler function a naked one
@@ -127,8 +104,6 @@ int main(void)
  * the MSP, this is the solution
  */
 __attribute__ ((naked)) void SVC_Handler(void){
-	__asm volatile("MOV R8,%[op1]"::[op1]"r"(a));
-	__asm volatile("MOV R9,%[op2]"::[op2]"r"(b));
 	__asm volatile("MRS R0,MSP");
 	__asm volatile("B SVC_Handler_c");
 }
@@ -148,97 +123,63 @@ void SVC_Handler_c(uint32_t *pBaseStackAddress){
 	 * Load from R1 stack position to local variable a
 	 * Load from R2 stack position to local variable b
 	 */
-	int32_t a1; //First operand of operation
-	int32_t a2; //Second operand of operation
-	int32_t result; //Variable to store result of operation
+	/* First operand of operation */
+	int32_t a;
+	/* Second operand of operation */
+	int32_t b;
+	/* Variable to store the result of operation */
+	int32_t result;
 	/* Load from R1 stacked value to local variable a */
-//	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(a1):[src]"r"(pBaseStackAddress + 1));
+	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(a):[src]"r"(pBaseStackAddress + 1));
 	/* Load from R2 stacked value to local variable b */
-//	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(a2):[src]"r"(pBaseStackAddress + 2));
+	__asm volatile("LDR %[dest],[%[src]]":[dest]"=r"(b):[src]"r"(pBaseStackAddress + 2));
 
 	/*Perform math operation
 	 * Match SVC_number against desired operation
-	 * For valid match, first turn OFF GREEN LED, perform operation.
-	 * Save the result of operation in R3 position of stack frame
-	 * Turn ON GREEN LED
-	 * For invalid valid match, raise HardFault exception
+	 * If match found, perform oepration and save the result of operation in R3 position of stack frame
+	 * For invalid valid match, raise UsageFault exception
 	 */
-	CPACR |= (0x0F << 20);
 	switch (SVC_number)
 	{
 		case 36:
-			/* Turn OFF GREEN LED connected to PD12 */
-			/* Load from R1 stacked value to local variable a */
-			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
-			/* Load from R2 stacked value to local variable b */
-			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
-
-			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = addition(a1, a2);
+			result = addition(a, b);
 			break;
 		case 37:
-			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
-			/* Load from R2 stacked value to local variable b */
-			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
-
-			/* Turn OFF GREEN LED connected to PD12 */
-			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = subtraction(a1, a2);
+			result = subtraction(a, b);
 			break;
 		case 38:
-			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
-			/* Load from R2 stacked value to local variable b */
-			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
-
-			/* Turn OFF GREEN LED connected to PD12 */
-			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = multiplication(a1, a2);
+			result = multiplication(a, b);
 			break;
 		case 39:
-			__asm volatile("MOV %[dest],R8":[dest]"=r"(a1));
-			/* Load from R2 stacked value to local variable b */
-			__asm volatile("MOV %[dest],R9":[dest]"=r"(a2));
-
-			/* Turn OFF GREEN LED connected to PD12 */
-			GPIOD_ODR &= ~(1U << 12);
 			/* Perform operation */
-			result = division(a1, a2);
+			result = division(a, b);
 			break;
+		default:
+			/* Set the invalid choice  flag to 1*/
+			choice_flag = 1;
+			/* Pend UsageFault exception for invalid SVC number. This will trigger HardFault exception. */
+			SHCSR |= (1U << 12);
 	}
 	/* Save the result in R3 position in stack */
 	*(pBaseStackAddress) = result;
 }
 
-void UsageFault_Handler(void){
-	/* Check for division-by-zero exception */
-	if (CFSR & (1U << 25)){
-		/* Turn ON the onboard BLUE LED if division by zero is entrapped */
-		GPIOD_ODR |= (1U << 15);
-	}
-	else{
-		/* Turn ON the onboard RED and BLUE LEDs for other exceptions */
-		GPIOD_ODR |= (1U << 14);
-		GPIOD_ODR |= (1U << 15);
-	}
-}
-
 void HardFault_Handler(void){
+	/* Check for division by zero exception occured during SVC handling */
 	if (CFSR & (1U << 25)){
-		/* Turn ON the onboard BLUE AND ORANGE LEDs if division by zero if entrapped through hardfault */
+		/* Turn ON the onboard BLUE LED if detected */
 		GPIOD_ODR |= (1U << 15);
-		GPIOD_ODR |= (1U << 13);
 	}
+	/* Check for invalid math operation number */
+	else if(choice_flag == 1)
+		/*Turn ON the ORANGE and RED LEDs */
+		GPIOD_ODR |= ((1U << 13) | (1U << 14));
 	else{
-	/* Turn ON the RED AND ORANGE LEDs for other exceptions*/
+	/* If any other HardFault exception occurs */
+	/* Turn ON the RED LED */
 	GPIOD_ODR |= (1U << 14);
-	GPIOD_ODR |= (1U << 13);
 	}
-}
-
-void delay(uint32_t count){
-	count = (uint32_t)(0.5*count*(count+1));
-	for(uint32_t volatile i = 0; i < count; i++);
 }

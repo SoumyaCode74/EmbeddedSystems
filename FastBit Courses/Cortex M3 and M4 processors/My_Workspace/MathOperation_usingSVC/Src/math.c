@@ -17,7 +17,6 @@ extern int32_t multiplication(int32_t a, int32_t b){
 	return a * b;
 }
 extern int32_t division(int32_t a, int32_t b){
-	/* Enable floating point unit */
 	return (a / b);
 }
 
