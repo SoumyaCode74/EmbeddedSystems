@@ -5,19 +5,24 @@
 #include "stm32f4xx.h"
 #include <stdio.h>
 
-/*#include "stm32f4xx.h"*/
-
 /*Tested with ARM Compiler : version 5*/
 
-void USART2_IRQHandler(void);
+/* Function to be called upon USART2 Interrupt handling */
 static void USART2_RX_Callback(void);
-void LED_play(int);
+/* Function to toggle an external LED for counts 
+ * equal to the ASCII equivalent of the character received from the PC over UART
+ */ 
+void LED_play(unsigned int);
 
-volatile int times = 0;
-volatile char c;
+volatile unsigned int times = 0; //Variable to record number of times the main thread is interrupted through UART 
+volatile char c; //To store ASCII equivalent of the key pressed and received over UART
+
 int main(void){
-	USART2_rx_interrupt_init(HSICLK, 115200UL); //Initialize USART2 with HSI, and Baud rate 9600 bits per second
-
+	/* Initialize USART2 module for UART operation with receive interrupt enabled */
+	/* Clock used: HSI (16 MHz); Baud Rate: 115.2 Kbps */
+	USART2_rx_interrupt_init(HSICLK, 115200UL); 
+	/* Initialize System Tick timer for accurate time delays */
+	systick_init();
 	RCC->AHB1ENR |= (1U << 0);   //Enable clock access to GPIOA
 	GPIOA->MODER &= ~(3U << 2);  //Reset direction of PIN1
 	GPIOA->MODER &= ~(3U << 10); //Reset direction of PIN5
@@ -26,49 +31,28 @@ int main(void){
 
 	while(1)
 	{
-//		printf("Awaiting interrupt and toggling LED. Now: %ld\r\n",((GPIOA->ODR >> 1) & 1U));
+		printf("Awaiting interrupt and toggling LED. Now: %ld\r\n",((GPIOA->ODR >> 1) & 1U));
 		GPIOA->ODR ^= (1U << 1);
 		delay_time_ms(250, HSICLK);
 	}
 }
 
-/*
- * Obtain the interrupt handler name from the startup file
- * Define the interrupt handler and the interrupt callback functions
- */
-
-void USART2_IRQHandler(void) //Execute ISR when IRQ38 happens
-{
-	if (USART2->SR & 0x0020)
-	{
-		USART2_RX_Callback();
-		NVIC->ICPR[1] |= (1U << 6);
-	}
-
-//		USART2_RX_Callback();
-//		USART2->SR &= ~(1U << 5); //Clear pending interrupt at USART2
-//
+void USART2_IRQHandler(void){
+	USART2_callback();
 }
-
 
 static void USART2_RX_Callback(void)
 {
 	++times;
-	c = USART2->DR;
+	c = USART2->DR; //Read from data register and reset the RXNIE bit
 	printf("Hello, you pressed key %c!\n\r",c);
 	printf("Times interrupted: %d\n\r", times);
 	LED_play(c);
 }
 
-
 void LED_play(int value) {
-    value %= 16;                    // cap the max count at 15
     for (; value > 0; value--) {
-        GPIOA->BSRR = 0x00000020;   // turn on LED
-        delay_time_ms(100, HSICLK);
-        GPIOA->BSRR = 0x00200000;   // turn off LED
+        GPIOA->ODR ^= (1U << 5);   // toggle LED
         delay_time_ms(100, HSICLK);
     }
-    delay_time_ms(500, HSICLK);
 }
-
