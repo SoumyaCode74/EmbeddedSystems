@@ -1,6 +1,7 @@
 #ifndef ADC_H
 #define ADC_H
 #include <stdint.h>
+#include "General.h"
 
 #define GPIOAEN		(1U<<0)
 #define GPIOCEN		(1U<<2)
@@ -30,6 +31,28 @@
 
 #define VREF_5V		(5U)
 #define VREF_3V3	(3.3f)
+
+#define ADC1			((ADC_TypeDef *)0x40012000)
+#define ADC_Common		((ADC_Common_TypeDef *)0x40012300)
+
+typedef struct{
+	volatile uint32_t SR;
+	volatile uint32_t CR1;
+	volatile uint32_t CR2;
+	volatile uint32_t SMPR[2];
+	volatile uint32_t JOFR[4];
+	volatile uint32_t HTR;
+	volatile uint32_t LTR;
+	volatile uint32_t SQR[3];
+	volatile uint32_t JSQR;
+	volatile uint32_t JDR[4];
+	volatile uint32_t DR;
+}ADC_TypeDef;
+
+typedef struct{
+	uint32_t reserved;
+	volatile uint32_t CCR;
+}ADC_Common_TypeDef;
 
 void pa0_ADC1_init(void);
 

@@ -36,7 +36,7 @@ int main(void){
 }
 
 void USART2_IRQHandler(void){
-	USART2_callback();
+	USART2_RX_Callback();
 }
 
 static void USART2_RX_Callback(void)
@@ -48,7 +48,7 @@ static void USART2_RX_Callback(void)
 	LED_play(c);
 }
 
-void LED_play(int value) {
+void LED_play(unsigned int value) {
     for (; value > 0; value--) {
         GPIOA->ODR ^= (1U << 5);   // toggle LED
         delay_time_ms(100, HSICLK);

@@ -3,3 +3,6 @@
 //At pin 5
 //Hence, it's PA5
 
+int main(){
+	;
+}

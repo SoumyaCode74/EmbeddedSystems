@@ -4,6 +4,8 @@
  *  Created on: 12-Nov-2022
  *      Author: soumy
  */
+#include <stdint.h>
+#include "General.h"
 
 #ifndef EXTI_H_
 #define EXTI_H_

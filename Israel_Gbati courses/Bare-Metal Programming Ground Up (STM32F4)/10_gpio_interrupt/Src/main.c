@@ -2,7 +2,6 @@
 #include "systick.h"
 #include "usart.h"
 #include "exti.h"
-#include "stm32f4xx.h"
 #include <stdio.h>
 
 void EXTI15_10_IRQHandler(void);

@@ -6,7 +6,7 @@
  */
 
 #include "exti.h"
-#include "stm32f4xx.h"
+#include "General.h"
 
 void pc13_exti_init(void)
 {
@@ -21,7 +21,8 @@ void pc13_exti_init(void)
 	 * Enable corresponding interrupt in the NVIC. Identify the IRQn from reference manual
 	 * Set priority in NVIC (optional)
 	 */
-	__disable_irq();
+//	__disable_irq();
+	__asm volatile("CPSID I");
 	RCC->AHB1ENR 		|= (1U << 2);
 	GPIOC->MODER 		&= ~(3U << 26);
 	RCC->APB2ENR 		|= (1U << 14);
@@ -31,6 +32,7 @@ void pc13_exti_init(void)
 	EXTI->RTSR			|= (1U << 13);
 //	NVIC_EnableIRQ(EXTI15_10_IRQn);
 	NVIC->ISER[1]       |= (1U << 8);
-	__enable_irq();
+//	__enable_irq();
+	__asm volatile("CPSIE I");
 
 }

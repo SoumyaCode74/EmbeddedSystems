@@ -2,9 +2,6 @@
 #include "systick.h"
 #include "usart.h"
 #include "adc.h"
-#include "adc_interrupt.h"
-#include "usart2_interrupt.h"
-#include "stm32f4xx.h"
 #include <stdio.h>
 
 void ADC_IRQHandler(void);

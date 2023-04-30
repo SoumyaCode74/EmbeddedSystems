@@ -4,7 +4,6 @@
  *  Created on: 09-Nov-2022
  *      Author: soumy
  */
-#include "stm32f4xx.h"
 #include "usart.h"
 
 

@@ -5,7 +5,6 @@
  *      Author: soumy
  */
 
-#include "stm32f4xx.h"
 #include "adc.h"
 #include "General.h"
 #include "usart.h"
@@ -24,9 +23,9 @@ void pa0_ADC1_init(void)
 	RCC->APB2ENR |= ADC1_EN;
 	/*Configure ADC parameters*/
 //	ADC1->SQR3  &= ~0x1F; 	 			//Clear the bits for 1st sequence
-	ADC1->SQR3  &= ~ADC1_CH0;  			//Set channel 0 as 1st sequence conversion
+	ADC1->SQR[2]  &= ~ADC1_CH0;  			//Set channel 0 as 1st sequence conversion
 	ADC1->CR1   &= ~(3U<<24);			//Set resolution to 12-bit
-	ADC1->SMPR2 &= ~(7U<<0);			//Set sampling rate to 3 cycles per sample for CH0
+	ADC1->SMPR[1] &= ~(7U<<0);			//Set sampling rate to 3 cycles per sample for CH0
 	ADC1->CR2	&= ~ADC1_ALIGN;			//Right shift converted result
 	ADC1->CR2   |= ADC1_ON;				//Power on the ADC module
 
@@ -43,10 +42,10 @@ void pa1_ADC1_init(void)
 	/*Enable clock access to ADC module*/
 	RCC->APB2ENR |= ADC1_EN;
 	/*Configure ADC parameters*/
-	ADC1->SQR3  &= ~0x1F; 	 			//Clear the bits for 1st sequence
-	ADC1->SQR3  |= ADC1_CH1;  			//Set channel 0 as 1st sequence conversion
+	ADC1->SQR[2]  &= ~0x1F; 	 			//Clear the bits for 1st sequence
+	ADC1->SQR[2]  |= ADC1_CH1;  			//Set channel 0 as 1st sequence conversion
 	ADC1->CR1   &= ~(3U<<24);			//Set resolution to 12-bit
-	ADC1->SMPR2 &= ~(7U<<3);			//Set sampling rate to 3 cycles per sample for CH0
+	ADC1->SMPR[1] &= ~(7U<<3);			//Set sampling rate to 3 cycles per sample for CH0
 	ADC1->CR2	&= ~ADC1_ALIGN;			//Right shift converted result
 	ADC1->CR2   |= ADC1_ON;				//Power on the ADC module
 
@@ -69,18 +68,20 @@ void pa0_ADC1_interrupt_init(void)
 	 * Start conversion
 	 * Enable global interrupts
 	 */
-	__disable_irq();
+//	__disable_irq();
+	__asm volatile("CPSID I");
 	RCC->APB2ENR |=  (1U << 8);
 	RCC->AHB1ENR |=  (1U << 0);
 	GPIOA->MODER |=  (3U << 0);
-	ADC1->SQR3   &= ~(31U << 0);
+	ADC1->SQR[2]   &= ~(31U << 0);
 	ADC1->CR1	 &= ~(3U << 24);
-	ADC1->SMPR2	 &= ~(3U << 0);
+	ADC1->SMPR[1]	 &= ~(3U << 0);
 	ADC1->CR2	 &= ~(1U << 11);
 	ADC1->CR1	 |=  (1U << 5);
 	NVIC->ISER[0]|=  (1U << 18);
 	ADC1->CR2	 |=  (1U << 0);
-	__enable_irq();
+//	__enable_irq();
+	__asm volatile("CPSIE I");
 
 }
 
