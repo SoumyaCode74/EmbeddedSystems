@@ -1,0 +1,781 @@
+!SESSION 2023-06-18 10:22:48.800 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-18 10:23:17.632
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-18 10:23:17.836
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-18 10:23:30.750
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-06-18 13:12:03.908 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-18 13:12:26.210
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-18 13:12:26.459
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-18 13:12:40.934
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-06-19 11:12:43.995 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-19 11:12:58.410
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-19 11:12:58.637
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-19 11:13:13.377
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-19 11:28:24.036
+!MESSAGE Indexed 'FreeRTOS_Projects' (19 sources, 81 headers) in 2.99 sec: 4,584 declarations; 20,526 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.008%)
+!SESSION 2023-06-24 14:12:10.957 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-24 14:13:46.441
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-24 14:13:46.703
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-24 14:14:01.672
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-24 14:24:28.297
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-24 14:24:30.352
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-24 14:24:31.414
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-06-24 14:24:34.600
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-24 14:24:35.616
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-06-25 13:56:23.066 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-25 16:11:14.450
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-25 16:11:14.794
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-25 16:11:30.610
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-25 16:25:12.521
+!MESSAGE Indexed 'FreeRTOS_Projects' (27 sources, 128 headers) in 3.4 sec: 10,593 declarations; 41,929 references; 3 unresolved inclusions; 158 syntax errors; 163 unresolved names (0.31%)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-25 16:30:57.606
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-25 16:30:59.676
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-25 16:31:00.276
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-06-25 16:31:03.272
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-25 16:31:04.321
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-06-26 21:45:08.434 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-26 23:42:08.931
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-26 23:42:09.303
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-26 23:42:24.772
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-27 00:01:45.802
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-27 00:01:47.296
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-27 00:01:48.304
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-06-27 00:01:51.593
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-27 00:01:52.573
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-27 10:06:35.699
+!MESSAGE Indexed '001Tasks' (30 sources, 131 headers) in 3.34 sec: 12,253 declarations; 62,601 references; 2 unresolved inclusions; 151 syntax errors; 149 unresolved names (0.2%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-27 10:08:33.793
+!MESSAGE Indexed '001Tasks' (30 sources, 131 headers) in 2.38 sec: 12,253 declarations; 62,601 references; 2 unresolved inclusions; 151 syntax errors; 149 unresolved names (0.2%)
+!SESSION 2023-06-29 07:51:38.886 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-29 07:54:18.546
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-29 07:54:19.410
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-29 07:54:56.960
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-29 08:13:32.171
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-29 08:13:33.775
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-29 08:13:34.613
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-06-29 08:13:39.900
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-29 08:13:40.911
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 4 0 2023-06-29 09:15:56.963
+!MESSAGE Stackanalyzer failed to analyze input
+!STACK 0
+java.lang.Exception: File: D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\Debug\001Tasks.elfdo not exists
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:56)
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:84)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:915)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$16(StackAnalyzerView.java:1277)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+!SESSION 2023-07-01 16:42:57.426 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-01 17:32:05.471
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-01 17:32:05.800
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-01 17:32:24.896
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 18:12:04.080
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 18:12:06.175
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 18:12:07.219
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-07-01 18:12:10.642
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 18:12:11.700
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 18:22:04.508
+!MESSAGE Indexed '001Tasks' (80 sources, 166 headers) in 5.63 sec: 15,351 declarations; 72,862 references; 47 unresolved inclusions; 158 syntax errors; 418 unresolved names (0.47%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 18:26:45.702
+!MESSAGE Indexed '001Tasks' (80 sources, 166 headers) in 2.71 sec: 15,351 declarations; 72,862 references; 47 unresolved inclusions; 158 syntax errors; 418 unresolved names (0.47%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 19:11:24.962
+!MESSAGE Indexed '001Tasks' (36 sources, 145 headers) in 3.89 sec: 14,253 declarations; 69,294 references; 2 unresolved inclusions; 151 syntax errors; 154 unresolved names (0.18%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 19:21:14.959
+!MESSAGE Indexed '001Tasks' (36 sources, 153 headers) in 1.69 sec: 14,667 declarations; 69,871 references; 2 unresolved inclusions; 151 syntax errors; 154 unresolved names (0.18%)
+!SESSION 2023-07-01 19:30:12.186 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-01 19:31:08.291
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-01 19:31:08.516
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-01 19:31:21.196
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 19:31:26.196
+!MESSAGE Indexed '001Tasks' (30 sources, 131 headers) in 3.86 sec: 12,261 declarations; 62,532 references; 2 unresolved inclusions; 151 syntax errors; 154 unresolved names (0.21%)
+
+!ENTRY org.eclipse.core.resources 4 2 2023-07-01 19:33:16.271
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/001Tasks/Debug/ThirdParty/SEGGER/Config)[368]: java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-07-01 19:33:16.271
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-07-01 19:33:16.271
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 75 2023-07-01 19:33:16.377
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2023-07-01 19:33:16.377
+!MESSAGE Errors running builder 'CDT Builder' on project '001Tasks'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/001Tasks/Debug/ThirdParty/SEGGER/Config)[368]: java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2023-07-01 19:33:16.377
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-07-01 19:33:16.377
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/SEGGER/Config' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:35:03.966
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:35:06.076
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:35:07.147
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-07-01 19:35:10.379
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:35:11.471
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-07-01 19:40:55.630 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-01 19:41:04.652
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-01 19:41:04.702
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-01 19:41:11.196
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 19:41:15.201
+!MESSAGE Indexed '001Tasks' (36 sources, 145 headers) in 3.81 sec: 14,256 declarations; 69,423 references; 2 unresolved inclusions; 151 syntax errors; 154 unresolved names (0.18%)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:48:44.527
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:48:46.683
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:48:47.763
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-07-01 19:48:50.950
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 19:48:52.010
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-07-01 19:59:37.311 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-01 19:59:46.232
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-01 19:59:46.366
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-01 19:59:52.225
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 19:59:55.771
+!MESSAGE Indexed '001Tasks' (37 sources, 145 headers) in 3.36 sec: 14,308 declarations; 69,640 references; 2 unresolved inclusions; 151 syntax errors; 159 unresolved names (0.19%)
+!SESSION 2023-07-01 20:03:14.152 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-01 20:03:19.489
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-01 20:03:19.547
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-01 20:03:25.575
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-01 20:03:28.772
+!MESSAGE Indexed '001Tasks' (31 sources, 131 headers) in 3.02 sec: 12,316 declarations; 62,878 references; 2 unresolved inclusions; 151 syntax errors; 159 unresolved names (0.21%)
+
+!ENTRY org.eclipse.core.resources 4 2 2023-07-01 20:05:42.704
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F)[368]: java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-07-01 20:05:42.704
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-07-01 20:05:42.705
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 75 2023-07-01 20:05:42.789
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2023-07-01 20:05:42.789
+!MESSAGE Errors running builder 'CDT Builder' on project '001Tasks'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F)[368]: java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2023-07-01 20:05:42.790
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-07-01 20:05:42.790
+!MESSAGE Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/001Tasks/Debug/ThirdParty/FreeRTOS/GCC/ARM_CM4F' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:629)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:869)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:781)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 4 0 2023-07-01 20:09:15.049
+!MESSAGE Stackanalyzer failed to analyze input
+!STACK 0
+java.lang.Exception: File: D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\001Tasks\Debug\001Tasks.elfdo not exists
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:56)
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:84)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:915)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1212)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 21:04:48.718
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 21:04:51.019
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 21:04:52.117
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-07-01 21:04:55.753
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-01 21:04:56.835
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-02 00:48:02.995
+!MESSAGE Indexed '001Tasks' (36 sources, 145 headers) in 3.25 sec: 14,267 declarations; 69,972 references; 2 unresolved inclusions; 151 syntax errors; 157 unresolved names (0.19%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-02 00:50:36.273
+!MESSAGE Indexed '001Tasks' (36 sources, 145 headers) in 1.85 sec: 14,267 declarations; 69,972 references; 2 unresolved inclusions; 151 syntax errors; 157 unresolved names (0.19%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-02 00:52:07.862
+!MESSAGE Indexed '001Tasks' (36 sources, 145 headers) in 1.65 sec: 14,267 declarations; 69,972 references; 2 unresolved inclusions; 151 syntax errors; 157 unresolved names (0.19%)
+
+!ENTRY org.eclipse.cdt.debug.core.memory 4 5012 2023-07-02 01:35:36.925
+!MESSAGE Could not write to file.
+!STACK 0
+java.io.FileNotFoundException: D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\Records\001_cooperative.SVdat (The process cannot access the file because it is being used by another process)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.output(FileExport.java:87)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.run(FileExport.java:57)
+	at org.eclipse.cdt.debug.internal.core.memory.transport.TransportJob.run(TransportJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.debug.core.memory 4 5012 2023-07-02 01:35:37.048
+!MESSAGE Could not write to file.
+!STACK 0
+java.io.FileNotFoundException: D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\Records\001_cooperative.SVdat (The process cannot access the file because it is being used by another process)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.output(FileExport.java:87)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.run(FileExport.java:57)
+	at org.eclipse.cdt.debug.internal.core.memory.transport.TransportJob.run(TransportJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-07-02 13:56:15.740 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-02 13:56:32.566
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-02 13:56:32.824
+!MESSAGE Log4j initialized with config file D:\Users\soumy\GitHub\EmbeddedSystems\EmbeddedSystems\FastBit Courses\FreeRTOS\RTOS_workspace\Workspace_202212\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-02 13:56:49.521
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-02 14:14:39.371
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-02 14:14:41.571
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-02 14:14:42.608
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-07-02 14:14:45.400
+!MESSAGE No repository found at http://update.toem.de.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-07-02 14:14:46.436
+!MESSAGE Using unsafe http transport to retrieve http://update.toem.de/i1, see CVE-2021-41033. Consider using https instead.
